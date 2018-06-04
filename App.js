@@ -14,16 +14,16 @@ export default class App extends React.Component {
     }
   }
   render() {
-    let component;
+    let Cabarana;
     if (this.state.path == 'Stream') {
-      component = StreamC;
+      Cabarana = StreamC;
     } else if (this.state.path == 'Settings') {
 
     } else {
-      component = View;
+      Cabarana = View;
     }
     return (
-      <component router={this.router} />
+      <Cabarana router={this.router} />
     );
   }
 }
