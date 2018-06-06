@@ -34,7 +34,15 @@ TCP
 Send a POST request with data formatted with JSON
 ```json
 {
-	gps: "*data*",
-	timestamp: "2018-06-03T16:09:21.391Z"
+	gps: {
+		lat: 12.222,
+		long: 12.222,
+		alt: 0
+	},
+	battery: {
+		level: 37,
+		isCharging: false
+	},
+	timestamp: 1528137577952
 }
 ```

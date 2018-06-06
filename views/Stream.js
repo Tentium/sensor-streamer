@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View, AsyncStorage, Button, TextInput, Picker, NativeModules } from 'react-native'
-import BackgroundTimer from 'react-native-background-timer'
+import { StyleSheet, Text, View, AsyncStorage, Button, TextInput, Picker, NativeModules, AppRegistry } from 'react-native'
 import CheckBox from 'react-native-check-box'
 import axios from 'axios'
 import update from 'immutability-helper'
 
-const { BatteryManager } = NativeModules
+AppRegistry.registerHeadlessTask('StreamTask', () => require('./StreamTask.js'));
+
+const { BatteryManager, jobModule } = NativeModules
+
+let config = {}
 
 export default class Stream extends React.Component {
 	constructor() {
@@ -34,9 +37,11 @@ export default class Stream extends React.Component {
 	updateSendData = name => {
 		let newData = update(this.state.data, { [name]: { $set: !this.state.data[name] } })
 		this.setState({ data: newData })
-		AsyncStorage.setItem("sendData", JSON.stringify(newData)).catch(err => {
-			console.error(err)
-		})
+
+		AsyncStorage.setItem("sendData", JSON.stringify(newData))
+			.catch(err => {
+				console.error(err)
+			})
 	}
 	render() {
 		return (
@@ -91,40 +96,16 @@ export default class Stream extends React.Component {
 		let dataToSend = Object.assign({}, this.state.data)
 		this.setState({ streaming: true })
 
-		BackgroundTimer.stopBackgroundTimer()
+		config = {
+			dataToSend,
+			host,
+			interval
+		}
 
-		BackgroundTimer.runBackgroundTimer(() => {
-			let gpsPromise = new Promise((resolve, reject) => {
-				if (!dataToSend.gps) resolve(undefined)
-
-				navigator.geolocation.getCurrentPosition(data => {
-					resolve({
-						long: data.coords.longitude,
-						lat: data.coords.latitude,
-						alt: data.coords.altitude
-					})
-				})
-			})
-			let batteryPromise = new Promise((resolve, reject) => {
-				if (!dataToSend.battery) resolve(undefined)
-
-				BatteryManager.updateBatteryLevel(info => {
-					resolve({ level: info.level, charging: info.isPlugged })
-				})
-			})
-			Promise.all([gpsPromise, batteryPromise]).then(([gps, battery]) => {
-				axios.post(`http://${host}`, {
-					gps,
-					battery,
-					timestamp: Date.now()
-				}, {
-
-					})
-			})
-		}, interval)
+		AppRegistry.startHeadlessTask(100, "StreamTask", config)
+		AppRegistry
 	}
 	stopStream = () => {
-		BackgroundTimer.stopBackgroundTimer()
 		this.setState({ streaming: false })
 	}
 }

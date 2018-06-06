@@ -37,8 +37,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		8DDF79095A68451581BEBABF /* libRNBackgroundTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB645BF49004DE096A75FE6 /* libRNBackgroundTimer.a */; };
-		543348F8F3DA4F249ED3B503 /* libRCTBattery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D739778DC3724BBCAE845372 /* libRCTBattery.a */; };
+		551C1EAE52984615A703083B /* libRCTBattery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7733738C53E1443A83C29618 /* libRCTBattery.a */; };
+		94DD5B3EF90A4FB6A06AECBD /* libRNBackgroundJob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B297FC8FCF65472592962D99 /* libRNBackgroundJob.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,10 +344,10 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		F3181B83E8594A548594E805 /* RNBackgroundTimer.xcodeproj */ = {isa = PBXFileReference; name = "RNBackgroundTimer.xcodeproj"; path = "../node_modules/react-native-background-timer/ios/RNBackgroundTimer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		5DB645BF49004DE096A75FE6 /* libRNBackgroundTimer.a */ = {isa = PBXFileReference; name = "libRNBackgroundTimer.a"; path = "libRNBackgroundTimer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		7492094DF87145D89564DA21 /* RCTBattery.xcodeproj */ = {isa = PBXFileReference; name = "RCTBattery.xcodeproj"; path = "../node_modules/react-native-battery/ios/RCTBattery.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		D739778DC3724BBCAE845372 /* libRCTBattery.a */ = {isa = PBXFileReference; name = "libRCTBattery.a"; path = "libRCTBattery.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5F7E2DF091E143BABB6AA0AB /* RCTBattery.xcodeproj */ = {isa = PBXFileReference; name = "RCTBattery.xcodeproj"; path = "../node_modules/react-native-battery/ios/RCTBattery.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		7733738C53E1443A83C29618 /* libRCTBattery.a */ = {isa = PBXFileReference; name = "libRCTBattery.a"; path = "libRCTBattery.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		46DA8D42E2F04E59A86F1F8D /* RNBackgroundJob.xcodeproj */ = {isa = PBXFileReference; name = "RNBackgroundJob.xcodeproj"; path = "../node_modules/react-native-background-job/ios/RNBackgroundJob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B297FC8FCF65472592962D99 /* libRNBackgroundJob.a */ = {isa = PBXFileReference; name = "libRNBackgroundJob.a"; path = "libRNBackgroundJob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,8 +376,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				8DDF79095A68451581BEBABF /* libRNBackgroundTimer.a in Frameworks */,
-				543348F8F3DA4F249ED3B503 /* libRCTBattery.a in Frameworks */,
+				551C1EAE52984615A703083B /* libRCTBattery.a in Frameworks */,
+				94DD5B3EF90A4FB6A06AECBD /* libRNBackgroundJob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,8 +564,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				F3181B83E8594A548594E805 /* RNBackgroundTimer.xcodeproj */,
-				7492094DF87145D89564DA21 /* RCTBattery.xcodeproj */,
+				5F7E2DF091E143BABB6AA0AB /* RCTBattery.xcodeproj */,
+				46DA8D42E2F04E59A86F1F8D /* RNBackgroundJob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1193,12 +1193,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Debug;
@@ -1220,12 +1219,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Release;
@@ -1247,8 +1245,8 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Debug;
@@ -1269,8 +1267,8 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Release;
@@ -1301,12 +1299,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Debug;
@@ -1337,12 +1334,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Release;
@@ -1372,12 +1368,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Debug;
@@ -1407,12 +1402,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-background-timer\ios",
 					"$(SRCROOT)\..\node_modules\react-native-battery\ios\RCTBattery",
+					"$(SRCROOT)\..\node_modules\react-native-background-job\ios",
 				);
 			};
 			name = Release;
