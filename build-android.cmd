@@ -1,1 +1,0 @@
-cd android && gradlew assembleRelease && cd .. && copy "android\app\build\outputs\apk\app-release.apk" "apk"
